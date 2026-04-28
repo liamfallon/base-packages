@@ -14,7 +14,7 @@
 apiVersion: v1
 kind: Service
 metadata: # kpt-merge: /nginx-dir-named
-  name: connacht-base-slash-wf-slash-wf-bm-slash-bm-dep-subpkg-2-slash-bm-dep-subsubpkg-2-2
+  name: connacht-base-d-wf-d-wf-bm-d-bm-dep-subpkg-2-d-bm-dep-subsubpkg-2-2
   labels:
     app: nginx
   annotations:

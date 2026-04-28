@@ -14,7 +14,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: # kpt-merge: /nginx-dir-named
-  name: connacht-base-slash-cb-subdir-c-slash-cb-subsubdir-c-a
+  name: connacht-base-d-cb-subdir-c-d-cb-subsubdir-c-a
   annotations:
     internal.kpt.dev/upstream-identifier: apps|Deployment|default|nginx-dir-named
 spec:

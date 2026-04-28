@@ -6,4 +6,4 @@ metadata: # kpt-merge: /kptfile.kpt.dev
     config.kubernetes.io/local-config: "true"
     internal.kpt.dev/upstream-identifier: '|ConfigMap|default|kptfile.kpt.dev'
 data:
-  name: connacht-base-slash-cb-subdir-a-slash-cb-subdir-a-wf-slash-cb-subdir-a-wf-bm-slash-bm-dep-subpkg-1
+  name: connacht-base-d-cb-subdir-a-d-cb-subdir-a-wf-d-cb-subdir-a-wf-bm-d-bm-dep-subpkg-1

@@ -1,7 +1,7 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
-  name: connacht-base-slash-cb-dep-subpkg-2-slash-cb-dep-subsubpkg-2-3-slash-cb-dep-subsubpkg-2-3-wf-slash-cb-dep-subsubpkg-2-3-wf-bm
+  name: connacht-base-d-cb-dep-subpkg-2-d-cb-dep-subsubpkg-2-3-d-cb-dep-subsubpkg-2-3-wf-d-cb-dep-subsubpkg-2-3-wf-bm
   annotations:
     config.kubernetes.io/local-config: "true"
 upstream:
@@ -17,9 +17,9 @@ upstreamLock:
     repo: https://github.com/liamfallon/upstream-packages
     directory: /boring-middleware
     ref: bm-v1
-    commit: 2de7ca71403e0c50970f9a6b943a45a2175c2a31
+    commit: 5d0a05ab4bffcc5c83b9602f8fd8be748b5f8071
 info:
-  description: This is a nginx deployment for connacht-base-slash-cb-dep-subpkg-2-slash-cb-dep-subsubpkg-2-3-slash-cb-dep-subsubpkg-2-3-wf-slash-cb-dep-subsubpkg-2-3-wf-bm
+  description: This is a nginx deployment for connacht-base-d-cb-dep-subpkg-2-d-cb-dep-subsubpkg-2-3-d-cb-dep-subsubpkg-2-3-wf-d-cb-dep-subsubpkg-2-3-wf-bm
 pipeline:
   mutators:
     - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest

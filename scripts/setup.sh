@@ -45,5 +45,6 @@ rm connacht-base/cb-subdir-c/cb-subsubdir-c-b/package-context.yaml
 rm connacht-base/cb-subdir-c/cb-subsubdir-c-b/starlark-set-to-dir-name.yaml
 
 yq -i 'del(.upstream, .upstreamLock, .status)' connacht-base/Kptfile
+yq -i '.data.name = "connacht-base"' connacht-base/package-context.yaml
 
 kpt fn render connacht-base
