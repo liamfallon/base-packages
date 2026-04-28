@@ -1,8 +1,26 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
-  name: connacht-base-dep-subpkg-1
+  name: connacht-base-slash-cb-dep-subpkg-1
   annotations:
     config.kubernetes.io/local-config: "true"
+upstream:
+  type: git
+  git:
+    repo: https://github.com/liamfallon/upstream-packages
+    directory: /nginx-dir-named
+    ref: nginx-dir-v1
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/liamfallon/upstream-packages
+    directory: /nginx-dir-named
+    ref: nginx-dir-v1
+    commit: ccab02cb6b4f526ef8dcdd914b777cc591e6ef6d
 info:
-  description: This is connacht-base-dep-subpkg-1
+  description: This is a nginx deployment for connacht-base-slash-cb-dep-subpkg-1
+pipeline:
+  mutators:
+    - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+      configPath: starlark-set-to-dir-name.yaml

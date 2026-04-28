@@ -5,4 +5,249 @@ metadata:
   annotations:
     config.kubernetes.io/local-config: "true"
 info:
-  description: This is connacht-base
+  description: This is a nginx deployment for connacht-base
+pipeline:
+  mutators:
+    - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+      configPath: starlark-set-to-dir-name.yaml
+status:
+  conditions:
+    - type: Rendered
+      status: "True"
+      reason: RenderSuccess
+  renderStatus:
+    mutationSteps:
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0
+      - image: ghcr.io/kptdev/krm-functions-catalog/starlark:latest
+        exitCode: 0

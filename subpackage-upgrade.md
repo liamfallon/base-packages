@@ -253,7 +253,19 @@ Package "connacht-base"
 ```
 </details>
 
-The contents of the base package is sdimilar to the "Wonderful Feature" and "Boring Middleware" upstream packages, see the package tree above. It has an extra directory tree `cb-subdir-c\cb-subsubdir-c-a` and `cb-subdir-c\cb-subsubdir-c-b`. The package contains the same 11 nginx deployments as in the upstream pacakges and three extra nginx deployments for each node of the extra directory tree.
+The contents of the base package is similar to the "Wonderful Feature" and "Boring Middleware" upstream packages, see the package tree above. It has an extra directory tree `cb-subdir-c\cb-subsubdir-c-a` and `cb-subdir-c\cb-subsubdir-c-b`. The package contains the same 11 nginx deployments as in the upstream pacakges and three extra nginx deployments for each node of the extra directory tree.
+
+We tag the versions of the two upstream packages in git, `wf-v1` for "Wonderful Feature" and `bm-v1` for "Boring Middleware""
+
+```
+git tag wf-v1  
+git tag bm-v1  
+git push --tags         
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:liamfallon/upstream-packages.git
+ * [new tag]         bm-v1 -> bm-v1
+ * [new tag]         wf-v1 -> wf-v1
+```
 
 ### Adding Independent Subpackages to the Base Package
 
@@ -261,13 +273,31 @@ We now add the two upstream packages as subpackages to the base package. We:
 
  - add the "Wonderful Feature" upstream package as a subpackage of the "Connacht Base" package at root level
  - add the "Wonderful Feature" upstream package as a subpackage of the "cb-subdir-a" subdirectory of the "Connacht Base" package
- - add the "Wonderful Feature" upstream package as a subpackage of the "cb-subdir-c\cb-subsubdir-c-a" sub-subdirectory of the "Connacht Base" package
+ - add the "Wonderful Feature" upstream package as a subpackage of the "cb-subdir-c/cb-subsubdir-c-a" sub-subdirectory of the "Connacht Base" package
  - add the "Wonderful Feature" upstream package as a subpackage of the "cb-dep-subsubpkg-2-3" subpackage of the "Connacht Base" package
  - add the "Boring Middleware" as a subpackage of the "Connacht Base" package at root level
  - add the "Boring Middleware" as a subpackage of the "Wonderful Feature" subpackage of the "Connacht Base" package at root level
  - add the "Boring Middleware" as a subpackage of the "Wonderful Feature" subpackage of the "cb-subdir-a" subdirectory of the "Connacht Base" package
- - add the "Boring Middleware" as a subpackage of the "Wonderful Feature" subpackage of the "cb-subdir-c\cb-subsubdir-c-a" sub-subdirectory of the "Connacht Base" package
+ - add the "Boring Middleware" as a subpackage of the "Wonderful Feature" subpackage of the "cb-subdir-c/cb-subsubdir-c-a" sub-subdirectory of the "Connacht Base" package
  - add the "Boring Middleware" as a subpackage of the "Wonderful Feature" upstream package as a subpackage of the "cb-dep-subsubpkg-2-3" subpackage of the "Connacht Base" package
  - add the "Boring Middleware" as a subpackage of the "cb-subdir-b" subdirectory of the "Connacht Base" package
  - add the "Boring Middleware" as a subpackage of the "cb-subdir-c\cb-subsubdir-c-b" sub-subdirectory of the "Connacht Base" package
  - add the "Boring Middleware" as a subpackage of the "cb-dep-subsubsubpkg-2-2-1" subpackage of the "Connacht Base" package
+
+We clone the [base packages](https://github.com/liamfallon/base-packages) repo and copy the `connacht-base` package to a new `connacht-base-ind-subpkg` package so
+that we preserve the original `connacht-base` package as it was before adding the independent subpackages.
+
+```
+kpt pkg get https://github.com/liamfallon/upstream-packages/wonderful-feature@wf-v1 connacht-base-ind-subpkg 
+kpt pkg get https://github.com/liamfallon/upstream-packages/wonderful-feature@wf-v1 connacht-base-ind-subpkg/cb-subdir-a
+kpt pkg get https://github.com/liamfallon/upstream-packages/wonderful-feature@wf-v1 connacht-base-ind-subpkg/cb-subdir-c/cb-subdir-c-a
+kpt pkg get https://github.com/liamfallon/upstream-packages/wonderful-feature@wf-v1 connacht-base-ind-subpkg/cb-dep-subpkg-2/cb-dep-subsubpkg-2-3  
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/wonderful-feature
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/cb-subdir-a/wonderful-feature
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/cb-subdir-c/cb-subdir-c-a/wonderful-feature
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/cb-dep-subpkg-2/cb-dep-subsubpkg-2-3/wonderful-feature
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/cb-subdir-b
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/cb-subdir-c/cb-subdir-c-b
+kpt pkg get https://github.com/liamfallon/upstream-packages/boring-middleware@bm-v1 connacht-base-ind-subpkg/cb-dep-subpkg-2/cb-dep-subsubpkg-2-2/cb-dep-subsubsubpkg-2-2-1
+```
